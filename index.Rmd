@@ -1,0 +1,57 @@
+---
+title       : Developing Data Products Course Project
+subtitle    : Energy Consumption Plots for New Houses
+author      : Pooya F. December 2017
+job         : Part of Coursera Data Science Specialization
+framework   : io2012        # {io2012, html5slides, shower, dzslides, ...}
+highlighter : highlight.js  # {highlight.js, prettify, highlight}
+hitheme     : tomorrow      #
+widgets     : []            # {mathjax, quiz, bootstrap}
+mode        : selfcontained # {standalone, draft}
+knit        : slidify::knit2slides
+---
+
+<style>
+.title-slide {
+  background-color: #FFFFFF; /* #EDE0CF; ; #CA9F9D*/
+}
+</style>
+
+## Description
+
+The Shiny App along with this presentation is showing a plot for energy consumption.
+the listed energies are:
+
+- gas
+- electricity
+- water
+
+for the years 2013 to 2015.
+
+---
+## How it Works
+
+Using the "consumption" data set, the data regarding 3 energies that are used in homes these days are gathered. for each selected year (2013 through 2015) You can choose type of energy and the app will show you the plot for consumption of that energy during the selected year.
+
+---
+## Usage
+
+It can help people to have an estimate of monthly bill payment for these 3 energies, here is the code to run and get the price for the first months in 2013.
+
+```{r head-10-lines, echo=FALSE}
+data <- read.csv("consumption.csv", sep=",", header=T)
+subset(data, select=c(Date,PriceGas,PriceElec,PriceWater))[60:70, ]
+```
+
+---
+## Shiny App and Github
+
+- Nthe shiny app wrote for this project can be accessed via the following link
+
+- https://dataspf.shinyapps.io/dev-data-products-master/
+
+- github containing other files:
+
+- https://github.com/Pooyafarah/DDP_CourseProject
+
+
